@@ -55,7 +55,7 @@ def result():
     return render_template("result.html", word=word)
 
 def get_feedback(guess, word):
-	"""
+    """
     Compares the guess to the target word and returns a list of feedback:
     'O' for correct letter in correct position,
     'Y' for correct letter in wrong position,
