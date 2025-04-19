@@ -31,7 +31,7 @@ pip install flask
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/wordchemy.git
+git clone https://github.com/Shadan13/Wordchemy.git
 cd wordchemy
 ```
 
@@ -48,7 +48,7 @@ python app.py
 ## 📁 Project Structure
 
 ```text
-wordchemy/
+Wordchemy/
 ├── app.py               # Main Flask app
 ├── WORDS.txt            # Word list for the game
 ├── templates/
