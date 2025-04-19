@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Over</title>
+</head>
+<body style="text-align: center; font-family: Arial, sans-serif;">
+    {% if won %}
+        <h1>Congrats! You guessed the word!</h1>
+		The word was: <strong>{{ word }}</strong>
+		<br><br>
+    {% else %}
+        <h1>Game Over!</h1>
+        The word was: <strong>{{ word }}</strong>
+		<br><br>
+    {% endif %}
+    <a href="/">Play Again</a>
+</body>
+</html>

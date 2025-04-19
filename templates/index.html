@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Wordle WebApp</title>
+	<style>
+		.tile {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			margin: 0 2px;
+			border: 1px solid #000;
+			font-weight: bold;
+		}
+
+		.tile.O { background-color: green; color: white; }
+		.tile.X { background-color: gray; color: white; }
+		.tile.Y { background-color: yellow; color: black; }
+	</style>
+</head>
+
+<body style="text-align: center; font-family: Arial, sans-serif;">
+	<h1>Wordle WebApp</h1>
+	
+	Attempts left: {{ attempts }}
+	<br><br>
+	
+	<form method="post">
+		<input type="text" name="guess" maxlength="5" minlength="5" required autofocus autocomplete="off">
+		<input type="submit" value="Submit">
+	</form>
+	
+	{% for guess, feedback in guesses %}
+        <div style="margin: 10px 0;">
+            {% for letter, mark in zip(guess, feedback) %}
+                <span class="tile {{ mark }}">{{ letter }}</span>
+            {% endfor %}
+        </div>
+    {% endfor %}
+	
+</body>
+</html>
